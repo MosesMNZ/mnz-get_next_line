@@ -6,10 +6,11 @@
 /*   By: mmuamba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 14:54:07 by mmuamba           #+#    #+#             */
-/*   Updated: 2018/06/16 09:30:03 by mmuamba          ###   ########.fr       */
+/*   Updated: 2018/06/23 13:07:21 by mmuamba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "get_next_line.h"
 
 int		get_next_line(const int fd, char **line)
@@ -53,22 +54,22 @@ int		newline(char **stored_buff, char **line)
 	return (0);
 }
 
-char	*strings_joining(char *s1, char *s2)
+char	*strings_joining(char *stored_buff, char *buff)
 {
 	size_t	i;
 	size_t	j;
 	char	*strings;
 
-	i = (s1) ? ft_strlen(s1) : 0;
-	j = ft_strlen(s2);
+	i = (stored_buff) ? ft_strlen(stored_buff) : 0;
+	j = ft_strlen(buff);
 	strings = ft_strnew(i + j);
 	if (strings)
 	{
-		if (s1)
-			ft_memcpy(strings, s1, i);
-		ft_memcpy(strings + i, s2, j);
+		if (stored_buff)
+			ft_memcpy(strings, stored_buff, i);
+		ft_memcpy(strings + i, buff, j);
 	}
-	if (s1)
-		ft_strdel(&s1);
+	if (stored_buff)
+		ft_strdel(&stored_buff);
 	return (strings);
 }

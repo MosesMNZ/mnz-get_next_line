@@ -6,7 +6,7 @@
 /*   By: mmuamba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/15 08:33:05 by mmuamba           #+#    #+#             */
-/*   Updated: 2018/06/16 09:25:11 by mmuamba          ###   ########.fr       */
+/*   Updated: 2018/06/23 13:10:20 by mmuamba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include "libft.h"
 
-# define BUFF_SIZE 8
+# define BUFF_SIZE 32
 
 int		newline(char **stored_buff, char **line);
 int		get_next_line(const int fd, char **line);
